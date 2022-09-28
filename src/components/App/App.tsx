@@ -1,6 +1,6 @@
-import './app.scss';
-import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
+
+import './app.scss';
 
 const App = () => {
 
