@@ -1,8 +1,6 @@
 @forward '../../styles/globals/';
 @use '../../styles/util/' as u1;
 
-
-
 .test1 {
     @include u1.media(">=desktop") {
         background-color: yellow;
