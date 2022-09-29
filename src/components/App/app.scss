@@ -1,31 +1,6 @@
 @forward '../../styles/globals/';
 @use '../../styles/util/' as u1;
 
-.test1 {
-    @include u1.media(">=desktop") {
-        background-color: yellow;
-
-        &::after {
-            content: "desktop"
-        }
-    }
-    @include u1.media(">=tablet", "<desktop") {
-        background-color: skyblue;
-
-        &::after {
-            content: "tablet"
-        }
-    }
-
-    @include u1.media(">=phone", "<tablet") {
-        background-color: aquamarine;
-
-        &::after {
-            content: "phone"
-        }
-    }
-}
-
 $color1: #f6bfa6;
 body {
     background-color: $color1 !important;
@@ -66,7 +41,7 @@ body {
         }
     }
 
-    .MidCvr {
+    .MidCvr, .LastCvr {
         margin: 20px 30px;
 
         .GName {
@@ -80,6 +55,23 @@ body {
             word-spacing: 2px;
             line-height: 1.35;
             color: darken($color1, 60);
+        }
+    }
+
+    .LastCvr {
+        padding: 50px 30px;
+        margin: 0 0;
+        border-radius: 80px;
+        background-color: #f7f8f7;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+            border-radius: 0;
+        }
+
+        .GName {
+            font-size: u1.rem(28);
+            margin: 0 0 20px;
         }
     }
 }
