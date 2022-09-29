@@ -26,13 +26,60 @@
     }
 }
 
+$color1: #f6bfa6;
 body {
-    background-color: #f6bfa6 !important;
+    background-color: $color1 !important;
+    color: #15110f
 }
 .AppMain {
     @include u1.block_display();
 
     .TopBar {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 15px;
+
+        &__icon {
+            width: 40px;
+            height: 40px;
+        }
+        &__hd {
+            font-size: u1.rem(27);
+            font-weight: 800;
+        }
+    }
+
+    .hero-section {
+        width: 100%;
+
+        & > div {
+            width: 90%;
+            margin: 0 auto;
+            text-align: center;
+
+            img {
+                max-width: 100%;
+                max-height: 400px;
+                border-radius: 60px;
+            }
+        }
+    }
+
+    .MidCvr {
+        margin: 20px 30px;
+
+        .Gname {
+            font-size: u1.rem(22);
+            font-weight: 700;
+            margin: 0 0 10px;
+            color: darken($color1, 60);
+        }
+        .GText {
+            font-size: u1.rem(14);
+            word-spacing: 2px;
+            line-height: 1.35;
+            color: darken($color1, 60);
+        }
     }
 }
