@@ -27,8 +27,12 @@
 }
 
 body {
-    background-color: #1F2326 !important;
+    background-color: #f6bfa6 !important;
 }
 .AppMain {
     @include u1.block_display();
+
+    .TopBar {
+        display: flex;
+    }
 }
