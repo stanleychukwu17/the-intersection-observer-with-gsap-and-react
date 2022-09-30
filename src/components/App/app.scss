@@ -2,9 +2,10 @@
 @use '../../styles/util/' as u1;
 
 $color1: #f6bfa6;
+$color2: #15110f;
 body {
     background-color: $color1 !important;
-    color: #15110f
+    color: $color2;
 }
 .AppMain {
     @include u1.block_display();
@@ -72,6 +73,29 @@ body {
         .GName {
             font-size: u1.rem(28);
             margin: 0 0 20px;
+        }
+        .GBtn {
+            margin: 20px 0 60px;
+            padding: 10px 2px;
+
+            > button {
+                position: relative;
+                padding: 20px 22px;
+                background-color: $color1;
+                border: 0;
+                font-size: u1.rem(17);
+                font-weight: 600;
+                border-radius: 4px;
+                box-shadow: 5px 5px 0 rgba(0,0,0,0.8);
+                cursor: pointer;
+                transition: all .3s ease-out, transform .8s ease-in-out;
+
+                &:hover {
+                    background-color: darken($color1, 1);
+                    transform: translate(-3px, -3px);
+                    box-shadow: 8px 8px 0 rgba(0,0,0,0.6);
+                }
+            }
         }
     }
 }

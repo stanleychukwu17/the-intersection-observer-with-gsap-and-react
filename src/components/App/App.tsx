@@ -41,7 +41,7 @@ const App = () => {
                     In sint nisi duis duis ex. Excepteur nisi ipsum magna reprehenderit excepteur adipisicing non anim magna exercitation esse aliqua. Incididunt veniam esse ullamco cillum fugiat sunt ex. Nostrud eiusmod nulla irure proident duis culpa proident. Qui amet mollit eiusmod non consequat amet nisi nulla tempor culpa irure occaecat dolor.
                     Ad ipsum officia dolor voluptate dolor officia irure labore ex. Sunt cillum qui elit officia eu. Laboris amet qui amet veniam. Est nostrud pariatur officia nulla ex. Esse cupidatat aliqua proident laboris veniam veniam ipsum.
                 </div>
-                <div className="">
+                <div className="GBtn">
                     <button>$ Book your summer now</button>
                 </div>
             </div>
