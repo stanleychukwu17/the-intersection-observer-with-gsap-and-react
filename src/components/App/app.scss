@@ -6,6 +6,7 @@ $color2: #15110f;
 body {
     background-color: $color1 !important;
     color: $color2;
+    visibility: hidden
 }
 .AppMain {
     @include u1.block_display();
@@ -61,21 +62,18 @@ body {
 
     .LastCvr {
         padding: 50px 30px;
-        margin: 0 0;
+        margin: 60px 0 0;
         border-radius: 80px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
         background-color: #f7f8f7;
-        transition: all .2s ease-in-out;
-
-        &:hover {
-            border-radius: 0;
-        }
 
         .GName {
             font-size: u1.rem(28);
             margin: 0 0 20px;
         }
         .GBtn {
-            margin: 20px 0 60px;
+            margin: 20px 0 40px;
             padding: 10px 2px;
 
             > button {
@@ -96,6 +94,12 @@ body {
                     box-shadow: 8px 8px 0 rgba(0,0,0,0.6);
                 }
             }
+        }
+
+        .animate {
+            position: relative;
+            transform: translateY(80px);
+            opacity: 0;
         }
     }
 }
