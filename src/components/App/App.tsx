@@ -1,4 +1,5 @@
-// import { gsap } from 'gsap';
+import { useIntersection } from 'react-use';
+import { gsap } from 'gsap';
 
 import './app.scss';
 
@@ -6,8 +7,19 @@ import './app.scss';
 import back from '../../assets/back3.svg'
 import msg from '../../assets/msg3.svg'
 import hero from '../../assets/hero.jpg'
+import { useRef } from 'react';
 
 const App = () => {
+    // ref to the element that we want to use the intersection hook for
+    const lastSectionRef = useRef<HTMLDivElement>({} as HTMLDivElement)
+
+    // All the ref to be observed
+    const intersection: IntersectionObserverEntry  = useIntersection(lastSectionRef, {
+        root:null,
+        rootMargin: '0px',
+        threshold: 1
+    }) as IntersectionObserverEntry
+
 
     return (
         <div className="AppMain">
@@ -29,7 +41,7 @@ const App = () => {
                     Ad ipsum officia dolor voluptate dolor officia irure labore ex. Sunt cillum qui elit officia eu. Laboris amet qui amet veniam. Est nostrud pariatur officia nulla ex. Esse cupidatat aliqua proident laboris veniam veniam ipsum.
                 </div>
             </div>
-            <div className="LastCvr">
+            <div className="LastCvr" ref={lastSectionRef}>
                 <div className="GName">Summer time in Ukraine is fun with endless activities</div>
                 <div className="GText">
                     Commodo velit aliqua quis in voluptate. Eu dolor dolor proident consectetur quis ea quis eiusmod exercitation ad dolor consequat. Exercitation ex deserunt magna Lorem. Minim pariatur do occaecat esse elit. Minim laboris do quis ullamco excepteur et mollit sit exercitation.
