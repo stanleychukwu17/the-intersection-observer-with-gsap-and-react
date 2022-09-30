@@ -5,13 +5,20 @@ I experimented on animating an Element in React where a user scrolls to that ele
 
 ## react-use npm package
 For this project, i used a hook from the react-use library, this library is awesome as it has so many useFul hooks that can help with various task on your project
-e.g 
+
+e.g
 useBattery
-useGeoLocation 
+
+useGeoLocation
+
 useKey, useKeyPress, useKeyboardJs, and useKeyPressEvent
+
 useLongPress
+
 useMotion
+
 useMouse
+
 And Plenty more, the link to the package:
 [react-use](https://www.npmjs.com/package/react-use).
 
