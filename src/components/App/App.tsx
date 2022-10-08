@@ -13,13 +13,11 @@ import hero from '../../assets/hero.jpg'
 const fadeInOrOut = (element: string, wch:'fadeIn' | 'fadeOut') => {
     if (wch === 'fadeIn') {
         gsap.to(element, {
-            opacity: 1, y: '0px', duration: 1,
-            stagger: { amount: .5 }
+            opacity: 1, y: '0px', duration: 1, stagger: {amount: .5}
         })
     } else {
         gsap.to(element, {
-            opacity: 0, y: '80px', duration: 1,
-            stagger: { amount: .5 }
+            opacity: 0, y: '80px', duration: 1, stagger: {amount: .5}
         })
     }
 }
@@ -27,6 +25,7 @@ const fadeInOrOut = (element: string, wch:'fadeIn' | 'fadeOut') => {
 const App = () => {
     // ref to the element that we want to use the intersection hook for
     const lastSectionRef = useRef<HTMLDivElement>({} as HTMLDivElement)
+
     // All the ref to be observed
     const intersection: IntersectionObserverEntry = useIntersection(lastSectionRef, {
         root:null,
@@ -36,10 +35,7 @@ const App = () => {
 
     // prevents a glitch that makes elements to flash on and off on page load, this only happens when u use react and gsap
     useEffect(() => {
-        gsap.to('body', {
-            visibility: 'visible',
-            duration: 0
-        })
+        gsap.to('body', {visibility: 'visible', duration: 0})
     }, [])
 
     // the teacher did the below:
